@@ -1,4 +1,6 @@
-let score = 20;
+const prompt = require('prompt-sync')();
+let score = prompt('please enter score:');
+score = parseInt(score);
 
 if (score > 79){
     console.log('A');
@@ -11,4 +13,3 @@ if (score > 79){
 }else{
     console.log('E');
 } 
-console.log(score);

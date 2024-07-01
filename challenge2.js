@@ -1,5 +1,8 @@
+const prompt = require('prompt-sync')();
+let speed = prompt('Please enter speed:');
+speed = parseInt(speed);
+
 function calculateDemeritPoints(){
-    let speed = 130;
     const speedLimit = 70;
     let demeritPoints = 0;
 

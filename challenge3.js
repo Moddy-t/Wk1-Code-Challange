@@ -1,3 +1,9 @@
+const prompt = require('prompt-sync')();
+let grossIncome = prompt('Please eneter gross income');
+grossIncome = parseInt(grossIncome); 
+let benefits = prompt('Please enter benefits');
+benefits = parseInt(benefits);
+
 function getIncome(grossIncome, benefits){
     let totalPay = grossIncome + benefits
 
@@ -34,12 +40,10 @@ function getIncome(grossIncome, benefits){
             grossIncome <= 7000 ? 0.06 * 7000: 0.06 * 36000;
 
             let paye = nssf + nhif +kra;
-            let netIncome = grossIncome - paye;
-
-            
-            return netIncome
+            let netIncome = grossIncome - paye
+            console.groupCollapsed(netIncome);
     }
 
 }
-let value = 65000;
-console.log(getIncome(value, 10000))
+
+getIncome(grossIncome, benefits);
